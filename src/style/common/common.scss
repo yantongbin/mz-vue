@@ -13,3 +13,9 @@
     transform-origin:0 0;
     transform: scaleY(.5); 
 }
+.info-col{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
