@@ -1,0 +1,70 @@
+@import './common/reset.scss';
+@import './common/common.scss';
+#all{
+    overflow: hidden;
+    #banner_wrapper{
+        width: 100%;
+        height: 2rem;
+        .swiper-container{
+            width: 100%;
+            height: 2rem;
+        }
+}
+#main_wrapper{
+    .main_header{
+        height: 0.48rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .main_header_left{
+            position: relative;
+            .main_header_left_span{
+                color: #ff5f16;
+            }
+            .header_left_line{
+                position: absolute;
+                width: 100%;
+                border-bottom:solid 2px  #ff5f16;
+                top: 30px;
+            }
+        }
+        .main_header_right{
+            position: relative;
+            .main_header_right_span{
+                color: #191a1b;
+            }
+            .header_right_line{
+                position: absolute;
+                width: 100%;
+                border-bottom:solid 2px  #ff5f16;
+                top: 30px;
+                display: none;
+            }
+        }        
+    }
+    .main_body{
+        ul{
+            li{
+                a{
+                    .li-a-left{
+                        float: left;
+                        img{
+                            width: 0.66rem;
+                            height: 0.9rem;
+                        }
+                    }
+                    .li-a-center{
+                        float: left;
+                        width: calc(100% - 1.16rem);
+                        padding: 0 10px;
+                    }
+                    .li-a-right{
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
+}
