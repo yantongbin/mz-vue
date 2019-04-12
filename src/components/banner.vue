@@ -23,30 +23,30 @@
   </div>
 </template>
 <script>
-  import Swiper from 'swiper';
-  import 'swiper/dist/css/swiper.css';
-  export default{
-    props:{
-      banners:{
-        type:Array,
-      }
-    },
-    data(){
-      return{
-        swiper: null
-      }
-    },
-    updated(){
-      if(!this.swiper){
-        this.swiper = new Swiper('.swiper-container',{
-          loop:true,
-          pagination: {
-          el: '.swiper-pagination',
-          },
-        })
-      }
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.css'
+export default {
+  props: {
+    banners: {
+      type: Array
     }
-  } 
+  },
+  data () {
+    return {
+      swiper: null
+    }
+  },
+  updated () {
+    if (!this.swiper) {
+      this.swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination'
+        }
+      })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -67,4 +67,3 @@
   }
 }
 </style>
-

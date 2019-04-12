@@ -7,19 +7,19 @@
 
 <script>
 import footerBody from './components/footer'
-export default { 
+export default {
   name: 'app',
-  data(){
+  data () {
     return {
-      tabs:[
-        {name: '电影', href: '/fristPage', icon: 'icon-dianying'},
-        {name: '影院', href: '/movie', icon: 'icon-yingyuana'},
-        {name: '特惠', href: '/aaa', icon: 'icon-tehui'},
-        {name: '我的', href: '/myPage', icon: 'icon-weibiaoti2fuzhi12'}
+      tabs: [
+        { name: '电影', href: '/fristPage', icon: 'icon-dianying' },
+        { name: '影院', href: '/movie', icon: 'icon-yingyuana' },
+        { name: '特惠', href: '/aaa', icon: 'icon-tehui' },
+        { name: '我的', href: '/myPage', icon: 'icon-weibiaoti2fuzhi12' }
       ]
     }
   },
-  components:{
+  components: {
     footerBody
   }
 }
@@ -28,5 +28,3 @@ export default {
 <style lang="scss">
   @import './style/home.scss';
 </style>
-
-

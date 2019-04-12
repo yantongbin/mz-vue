@@ -24,13 +24,13 @@
     </ul>
 </template>
 <script>
-    export default{
-        props:{
-            tabs:{
-                type:Array
-            }
-        }
+export default {
+  props: {
+    tabs: {
+      type: Array
     }
+  }
+}
 </script>
 
 <style lang="scss">
@@ -40,8 +40,8 @@
         position: fixed;
         left: 0;
         bottom:0;
-        z-index: 100;  
-        display: flex;  
+        z-index: 100;
+        display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
@@ -56,6 +56,5 @@
                 color: #ff5f16;
             }
         }
-    }    
+    }
 </style>
-
