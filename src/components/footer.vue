@@ -24,7 +24,6 @@ export default {
 <style lang="scss">
     .footer{
         width: 100%;
-        height: 0.5rem;
         position: fixed;
         left: 0;
         bottom:0;
@@ -35,9 +34,13 @@ export default {
         align-items: center;
         background-color: #fff;
         li{
+            width: 25%;
             .li-color-black{
+                width: 100%;
+                height: 0.49rem;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 align-items: center;
                 color: #797d82;
             }
