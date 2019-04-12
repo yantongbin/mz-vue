@@ -7,9 +7,12 @@ export default new VueRouter({
       component: () => import('./views/fristPage.vue'),
       children: [
         { path: 'nowPlaying', component: () => import('./components/nowPlaying.vue') },
-        { path: 'upComing', component: () => import('./components/upcoming.vue') }
+        { path: 'upComing', component: () => import('./components/upcoming.vue') },
+        {path: '', redirect: '/fristPage/nowPlaying'}
       ]
     },
-    { path: '/movie', component: () => import('./views/movie.vue') },
-    { path: '/myPage', component: () => import('./views/myPage.vue') }
+    {path: '/movie', component: () => import('./views/movie.vue') },
+    {path: '/myPage', component: () => import('./views/myPage.vue') },
+    {path: '/fristPage/:id', name: 'detail', component: () => import('./components/detail.vue') }
+
   ] })

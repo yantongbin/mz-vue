@@ -9,18 +9,6 @@
                 <span> {{item.name}} </span>
             </router-link>
         </li>
-        <!-- <li>
-            <i class="iconfont"></i>
-            <span>影院</span>
-        </li>
-        <li>
-            <i class="iconfont"></i>
-            <span>特惠</span>
-        </li>
-        <li>
-            <i class="iconfont"></i>
-            <span>我的</span>
-        </li> -->
     </ul>
 </template>
 <script>
@@ -45,6 +33,7 @@ export default {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        background-color: #fff;
         li{
             .li-color-black{
                 display: flex;
