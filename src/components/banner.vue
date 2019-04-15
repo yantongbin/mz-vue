@@ -9,12 +9,6 @@
           >
             <img :src="item.imgUrl" alt>
           </div>
-          <!-- <div class="swiper-slide">
-            <img src="../style/images/img/banner2.jpg" alt>
-          </div>
-          <div class="swiper-slide">
-            <img src="../style/images/img/banner3.jpg" alt>
-          </div> -->
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
@@ -53,6 +47,7 @@ export default {
 #banner_wrapper {
   width: 100%;
   height: 2rem;
+  position: relative;
   .swiper-container {
     width: 100%;
     height: 100%;

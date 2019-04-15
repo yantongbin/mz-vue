@@ -33,7 +33,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      nowPlaying: [],
+      nowPlaying: []
     }
   },
   methods: {
@@ -55,17 +55,17 @@ export default {
         })
         .then(res => {
           let data = res.data
-          console.log(data);
+          console.log(data)
           if (data.status === 0) {
             this.nowPlaying = data.data.films
           }
         })
     },
-    actorName(data){
+    actorName (data) {
       let temp = data.map(item => {
-        return item.name;
+        return item.name
       })
-      return temp.join('、');
+      return temp.join('、')
     }
   },
   created () {

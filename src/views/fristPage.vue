@@ -1,18 +1,21 @@
 <template>
   <div>
+    <div class="city-navgation">
+      <span>深圳</span>
+      <i class="iconfont icon-xiajiantou"></i>
+    </div>
     <Banner :banners="bannerList"></Banner>
     <div class="main_header">
       <ul>
-        <li :class="['li-style',{active: curType === item.id}]"
-            v-for="item in filmType"
-            :key = "item.id"
-            @click="chageType(item)"
+        <li
+          :class="['li-style',{active: curType === item.id}]"
+          v-for="item in filmType"
+          :key="item.id"
+          @click="chageType(item)"
         >
           <span>{{item.name}}</span>
         </li>
-        <div class="main_header_line"
-             :style="tabBarLink"
-        >
+        <div class="main_header_line" :style="tabBarLink">
           <span class="main_header_line_box"></span>
         </div>
       </ul>
@@ -100,7 +103,7 @@ export default {
       cursor: pointer;
       color: #191a1b;
     }
-    .active{
+    .active {
       color: #ff5f16;
     }
     .main_header_line {
@@ -117,5 +120,19 @@ export default {
       }
     }
   }
+}
+.city-navgation {
+  position: absolute;
+  top: 18px;
+  left: 7px;
+  color: #fff;
+  z-index: 10;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.2);
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 0 5px;
 }
 </style>

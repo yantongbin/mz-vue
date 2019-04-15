@@ -8,17 +8,18 @@ export default new VueRouter({
       component: () => import('./views/home.vue'),
       children: [
         { path: 'fristPage',
-        component: () => import('./views/fristPage.vue'),
-        children: [
-          { path: 'nowPlaying', component: () => import('./components/nowPlaying.vue') },
-          { path: 'upComing', component: () => import('./components/upcoming.vue') },
-          {path: '', redirect: '/fristPage/nowPlaying'}
-        ]
-      },
-      {path: 'movie', component: () => import('./views/movie.vue') },
-      {path: 'myPage', component: () => import('./views/myPage.vue') },
+          component: () => import('./views/fristPage.vue'),
+          children: [
+            { path: 'nowPlaying', component: () => import('./components/nowPlaying.vue') },
+            { path: 'upComing', component: () => import('./components/upcoming.vue') },
+            { path: '', redirect: '/fristPage/nowPlaying' }
+          ]
+        },
+        { path: 'movie', component: () => import('./views/movie.vue') },
+        { path: 'myPage', component: () => import('./views/myPage.vue') }
       ]
     },
-    {path: '/fristPage/:id', name: 'detail', component: () => import('./views/detail.vue') }
+    { path: '/fristPage/:id', name: 'detail', component: () => import('./views/detail.vue') },
+    { path: '*', component: () => import('./views/fristPage') }
 
   ] })

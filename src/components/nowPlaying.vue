@@ -33,25 +33,25 @@
   </div>
 </template>
 <script>
-import axios from "axios";
+import axios from 'axios'
 export default {
-  data() {
+  data () {
     return {
       nowPlaying: [],
       pageNum: 1,
       pageSize: 10,
-      total:44
-    };
+      total: 44
+    }
   },
   computed: {
-    totalPage(){
-      return Math.ceil(this.total / this.pageSize);
+    totalPage () {
+      return Math.ceil(this.total / this.pageSize)
     }
   },
   methods: {
-    getNowPlaying() {
+    getNowPlaying () {
       axios
-        .get("https://m.maizuo.com/gateway", {
+        .get('https://m.maizuo.com/gateway', {
           params: {
             cityId: 440300,
             pageNum: this.pageNum,
@@ -60,33 +60,33 @@ export default {
             k: 3611198
           },
           headers: {
-            "X-Client-Info":
+            'X-Client-Info':
               '{"a":"3000","ch":"1002","v":"1.0.0","e":"15547249332104533975391"}',
-            "X-Host": "mall.film-ticket.film.list"
+            'X-Host': 'mall.film-ticket.film.list'
           }
         })
         .then(res => {
-          let data = res.data;
+          let data = res.data
           if (data.status === 0) {
             this.nowPlaying.push(...data.data.films)
           }
-        });
+        })
     },
-    actorName(data = []) {
+    actorName (data = []) {
       let temp = data.map(item => {
-        return item.name;
-      });
-      return temp.join("、");
+        return item.name
+      })
+      return temp.join('、')
     },
-    loaderMore() {
-      this.pageNum++;
-      this.getNowPlaying();
+    loaderMore () {
+      this.pageNum++
+      this.getNowPlaying()
     }
   },
-  created() {
-    this.getNowPlaying();
+  created () {
+    this.getNowPlaying()
   }
-};
+}
 </script>
 
 <style lang="scss">
